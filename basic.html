@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Didact+Gothic&display=swap" rel="stylesheet">
+    <title>Basic Skill</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 kiri">
+        <div class="back">
+          <a href="/index.html"> <h3 style="text-decoration:none;"><img src="/assets/img/back.png" alt="">   Kembali ke home</h3></a>
+        </div>
+        <div class="video-list">
+          <div class="vid rounded-pill streched-link " id="change1">
+            <p class="title">Pemilihan Scene</p>  
+          </div>
+          <div class="vid rounded-pill streched-link " id="change2">
+            <p class="title">Text</p>
+          </div> 
+        </div>
+      </div> 
+      <div class="col-md-8 offset-1">
+        <div class="main-video">
+          <h1 class="title-video" style="font-size:34px;">Basic Skill</h1>
+          <h2 class="title-video pt-0" style="font-size:20px;">Pemilihan Scene, Lagu dan Tempo</h2>
+          <div class="video">
+            <video id="vid" controls style="width:75%">
+              <source id="src" src="/assets/video/basic1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 offset-5 mt-4">
+        <a href="/pengertian.html">
+        <button class="button button1">Back to Pengertian</button></a>
+      </div>
+      <div class="col-md-4 offset-1 mt-4">
+        <a href="/advanced.html">
+        <button class="button button2"> Next to Advanced Skill</button> </a>
+      </div>
+    </div>   
+  </div>
+
+    
+    <script>
+        const v = document.getElementById("vid");
+        const s = document.getElementById("src");
+        
+        function changeVideo1() { 
+            s.src = '/assets/video/basic1.mp4';
+            v.load();
+            v.play();
+        }
+
+        function changeVideo2() { 
+            s.src = '/assets/video/basic2.mp4';
+            v.load();
+            v.play();
+        }
+        
+        document.getElementById("change1").onclick=changeVideo1;       
+        document.getElementById("change2").onclick=changeVideo2; 
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+</html>
